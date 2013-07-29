@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar 
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+        
+        <TextView
+            android:id="@+id/backup_title"
+            style="@style/ScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Backup" />
+
+        <TableLayout
+            android:id="@+id/backup_grid"
+            android:layout_below="@id/backup_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" >
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            <TextView
+                style="@style/BackupOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message SMS" />
+
+            <TextView
+                android:id="@+id/backup_stats_sms"
+                style="@style/BackupStatistics"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/backup_check_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/BackupOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message MMS" />
+
+            <TextView
+                android:id="@+id/backup_stats_mms"
+                style="@style/BackupStatistics"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/backup_check_mms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/BackupOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historique d&apos;appel" />
+
+            <TextView
+                android:id="@+id/backup_stats_call"
+                style="@style/BackupStatistics"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/backup_check_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </TableLayout>
+
+        <Button
+            android:layout_below="@id/backup_grid"
+            android:id="@+id/button_start_process"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Demarrer" />
+    </RelativeLayout>
+
+</ScrollView>
